@@ -99,23 +99,25 @@
 
 
 
-  <meta name="description" content="Le vent se lève ,il faut tenter de vivre">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Insightcodeyk">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="概述流是一组有序的数据序列，有两种分类方式：  根据操作的类型，分为 输入流 和 输出流根据传输内容类型，分为 字节流 和 字符流  文件流字节流以字节为传输单位的流 字节输入流字节输入流超类(抽象):InputStream  总共包含9个方法，其中有3个read方法分别是，abstract int read(); &amp;gt;从输入流读取一个字节，返回该字节的十进制编码，结束返回-1int read">
+<meta name="keywords" content="Java,Stream">
+<meta property="og:type" content="article">
+<meta property="og:title" content="流">
+<meta property="og:url" content="http://yoursite.com/2018/04/16/Stream/index.html">
 <meta property="og:site_name" content="Insightcodeyk">
-<meta property="og:description" content="Le vent se lève ,il faut tenter de vivre">
+<meta property="og:description" content="概述流是一组有序的数据序列，有两种分类方式：  根据操作的类型，分为 输入流 和 输出流根据传输内容类型，分为 字节流 和 字符流  文件流字节流以字节为传输单位的流 字节输入流字节输入流超类(抽象):InputStream  总共包含9个方法，其中有3个read方法分别是，abstract int read(); &amp;gt;从输入流读取一个字节，返回该字节的十进制编码，结束返回-1int read">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-04-16T12:25:07.067Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Insightcodeyk">
-<meta name="twitter:description" content="Le vent se lève ,il faut tenter de vivre">
+<meta name="twitter:title" content="流">
+<meta name="twitter:description" content="概述流是一组有序的数据序列，有两种分类方式：  根据操作的类型，分为 输入流 和 输出流根据传输内容类型，分为 字节流 和 字符流  文件流字节流以字节为传输单位的流 字节输入流字节输入流超类(抽象):InputStream  总共包含9个方法，其中有3个read方法分别是，abstract int read(); &amp;gt;从输入流读取一个字节，返回该字节的十进制编码，结束返回-1int read">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/16/Stream/"/>
 
 
 
@@ -125,7 +127,7 @@
   };
 </script>
 
-  <title>Insightcodeyk</title>
+  <title>流 | Insightcodeyk</title>
   
 
 
@@ -172,8 +174,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -213,7 +214,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
     <a href="/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
   </li>
@@ -273,9 +274,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -307,11 +308,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/16/Stream/" itemprop="url">
-                  流
-                </a>
+          <h1 class="post-title" itemprop="name headline">流
               
             
           </h1>
@@ -385,9 +382,7 @@
       
 
       
-        
-          
-            <h4 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h4><p>流是一组有序的数据序列，有两种分类方式：</p>
+        <h4 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h4><p>流是一组有序的数据序列，有两种分类方式：</p>
 <blockquote>
 <p>根据操作的类型，分为 输入流 和 输出流<br>根据传输内容类型，分为 字节流 和 字符流</p>
 </blockquote>
@@ -451,8 +446,6 @@
 <h2 id="序列化流ObjectOutputStream-ObjectInputStream"><a href="#序列化流ObjectOutputStream-ObjectInputStream" class="headerlink" title="序列化流ObjectOutputStream/ObjectInputStream"></a>序列化流ObjectOutputStream/ObjectInputStream</h2><p>序列化流，用于保存和读入类信息，static 和 transient 声明的变量不被保存</p>
 <h1 id="其他流"><a href="#其他流" class="headerlink" title="其他流"></a>其他流</h1><h1 id="特别注释"><a href="#特别注释" class="headerlink" title="特别注释"></a>特别注释</h1><h2 id="文件类File"><a href="#文件类File" class="headerlink" title="文件类File"></a>文件类File</h2><p>创建管理文件以及目录,包含4种构造方法和非常多个成员方法</p>
 
-          
-        
       
     </div>
 
@@ -470,14 +463,22 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+            <a href="/tags/Stream/" rel="tag"># Stream</a>
+          
+        </div>
+      
+
+      
+      
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -487,14 +488,19 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -515,8 +521,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -603,6 +618,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件流"><span class="nav-number"></span> <span class="nav-text">文件流</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#字节流"><span class="nav-number"></span> <span class="nav-text">字节流</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字节输入流"><span class="nav-number"></span> <span class="nav-text">字节输入流</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#字节文件输入流FileInputStream"><span class="nav-number">1.</span> <span class="nav-text">字节文件输入流FileInputStream</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字节缓冲文件输入流BufferedInputStream"><span class="nav-number">2.</span> <span class="nav-text">字节缓冲文件输入流BufferedInputStream</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字节输出流"><span class="nav-number"></span> <span class="nav-text">字节输出流</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#字节文件输出流FileOutputStream"><span class="nav-number">1.</span> <span class="nav-text">字节文件输出流FileOutputStream</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字节缓冲文件输出流BufferedOutputStream"><span class="nav-number">2.</span> <span class="nav-text">字节缓冲文件输出流BufferedOutputStream</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符流"><span class="nav-number"></span> <span class="nav-text">字符流</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符输入流"><span class="nav-number"></span> <span class="nav-text">字符输入流</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#字符输入流转换器InputStreamReader"><span class="nav-number">1.</span> <span class="nav-text">字符输入流转换器InputStreamReader</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#便捷文件字符输入流FileReader"><span class="nav-number">2.</span> <span class="nav-text">便捷文件字符输入流FileReader</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#缓冲字符输入流BufferedReader"><span class="nav-number">3.</span> <span class="nav-text">缓冲字符输入流BufferedReader</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符输出流"><span class="nav-number"></span> <span class="nav-text">字符输出流</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#字符输出流转换器OutputStreamWriter"><span class="nav-number">1.</span> <span class="nav-text">字符输出流转换器OutputStreamWriter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#便捷文件字符输出流FileWriter"><span class="nav-number">2.</span> <span class="nav-text">便捷文件字符输出流FileWriter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#缓冲字符输出流BufferedWriter"><span class="nav-number">3.</span> <span class="nav-text">缓冲字符输出流BufferedWriter</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#特殊流"><span class="nav-number"></span> <span class="nav-text">特殊流</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#“标准”输入输出流System-in-System-out"><span class="nav-number"></span> <span class="nav-text">“标准”输入输出流System.in/System.out</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打印字节流PrintStream-打印字符流PrintWrite"><span class="nav-number"></span> <span class="nav-text">打印字节流PrintStream/打印字符流PrintWrite</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#序列化流ObjectOutputStream-ObjectInputStream"><span class="nav-number"></span> <span class="nav-text">序列化流ObjectOutputStream/ObjectInputStream</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他流"><span class="nav-number"></span> <span class="nav-text">其他流</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#特别注释"><span class="nav-number"></span> <span class="nav-text">特别注释</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#文件类File"><span class="nav-number"></span> <span class="nav-text">文件类File</span></a></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -737,6 +768,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.1.0"></script>
+
+
 
   
 
