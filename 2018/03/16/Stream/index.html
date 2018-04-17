@@ -99,25 +99,25 @@
 
 
 
-  <meta name="description" content="概述流是一组有序的数据序列，有两种分类方式：  根据操作的类型，分为 输入流 和 输出流根据传输内容类型，分为 字节流 和 字符流  文件流字节流以字节为传输单位的流 字节输入流字节输入流超类(抽象):InputStream  总共包含9个方法，其中有3个read方法分别是，abstract int read(); &amp;gt;从输入流读取一个字节，返回该字节的十进制编码，结束返回-1int read">
+  <meta name="description" content="概述流是一组有序的数据序列，有两种分类方式：  根据操作的类型，分为 输入流 和 输出流根据传输内容类型，分为 字节流 和 字符流  文件流字节流以字节为传输单位的流 字节输入流字节输入流超类(抽象):InputStream  总共包含9个方法，其中有3个read方法（重点: 在输入数据可用、检测到文件末尾或者抛出异常之前，read方法阻塞）分别是，abstract int read(); 从输入">
 <meta name="keywords" content="Java,Stream">
 <meta property="og:type" content="article">
 <meta property="og:title" content="流">
-<meta property="og:url" content="http://yoursite.com/2018/04/16/Stream/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/03/16/Stream/index.html">
 <meta property="og:site_name" content="Insightcodeyk">
-<meta property="og:description" content="概述流是一组有序的数据序列，有两种分类方式：  根据操作的类型，分为 输入流 和 输出流根据传输内容类型，分为 字节流 和 字符流  文件流字节流以字节为传输单位的流 字节输入流字节输入流超类(抽象):InputStream  总共包含9个方法，其中有3个read方法分别是，abstract int read(); &amp;gt;从输入流读取一个字节，返回该字节的十进制编码，结束返回-1int read">
+<meta property="og:description" content="概述流是一组有序的数据序列，有两种分类方式：  根据操作的类型，分为 输入流 和 输出流根据传输内容类型，分为 字节流 和 字符流  文件流字节流以字节为传输单位的流 字节输入流字节输入流超类(抽象):InputStream  总共包含9个方法，其中有3个read方法（重点: 在输入数据可用、检测到文件末尾或者抛出异常之前，read方法阻塞）分别是，abstract int read(); 从输入">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-16T12:25:07.067Z">
+<meta property="og:updated_time" content="2018-04-17T14:06:45.506Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="流">
-<meta name="twitter:description" content="概述流是一组有序的数据序列，有两种分类方式：  根据操作的类型，分为 输入流 和 输出流根据传输内容类型，分为 字节流 和 字符流  文件流字节流以字节为传输单位的流 字节输入流字节输入流超类(抽象):InputStream  总共包含9个方法，其中有3个read方法分别是，abstract int read(); &amp;gt;从输入流读取一个字节，返回该字节的十进制编码，结束返回-1int read">
+<meta name="twitter:description" content="概述流是一组有序的数据序列，有两种分类方式：  根据操作的类型，分为 输入流 和 输出流根据传输内容类型，分为 字节流 和 字符流  文件流字节流以字节为传输单位的流 字节输入流字节输入流超类(抽象):InputStream  总共包含9个方法，其中有3个read方法（重点: 在输入数据可用、检测到文件末尾或者抛出异常之前，read方法阻塞）分别是，abstract int read(); 从输入">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/16/Stream/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/16/Stream/"/>
 
 
 
@@ -222,17 +222,17 @@
         
         
           
-          <li class="menu-item menu-item-tags">
-    <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
   </li>
         
         
         
           
-          <li class="menu-item menu-item-categories">
-    <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
   </li>
         
         
@@ -291,7 +291,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/16/Stream/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/16/Stream/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ke Yi">
@@ -327,7 +327,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-16T19:38:25+08:00">2018-04-16</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-16T19:38:25+08:00">2018-03-16</time>
             
 
             
@@ -389,12 +389,12 @@
 <h1 id="文件流"><a href="#文件流" class="headerlink" title="文件流"></a>文件流</h1><h2 id="字节流"><a href="#字节流" class="headerlink" title="字节流"></a>字节流</h2><p>以字节为传输单位的流</p>
 <h3 id="字节输入流"><a href="#字节输入流" class="headerlink" title="字节输入流"></a>字节输入流</h3><p>字节输入流超类(抽象):InputStream</p>
 <blockquote>
-<p>总共包含9个方法，其中有3个read方法<br>分别是，<br>abstract int read(); &gt;从输入流读取一个字节，返回该字节的十进制编码，结束返回-1<br>int read(byte[] buffer); &gt;从输入流读取一个字节数组，返回数组中获得的字节数，结束返回-1<br>int read(byte[] buffer, int offser, int len); &gt;从输入流读取一个字符数组，指定开始&gt;和长度，结束返回 -1</p>
+<p>总共包含9个方法，其中有3个read方法（<strong>重点</strong>: <strong>在输入数据可用、检测到文件末尾或者抛出异常之前，read方法阻塞</strong>）<br>分别是，<br>abstract int read(); 从输入流读取一个字节，返回该字节的十进制编码，结束返回-1<br>int read(byte[] buffer); 从输入流读取一个字节数组，返回数组中获得的字节数，结束返回-1<br><em>read方法自动检测byte[]数组长度，每次读入最多(length - 1)个字节</em><br>int read(byte[] buffer, int offser, int len); 从输入流读取一个字符数组，指定开始&gt;和长度，结束返回 -1</p>
 </blockquote>
 <h4 id="字节文件输入流FileInputStream"><a href="#字节文件输入流FileInputStream" class="headerlink" title="字节文件输入流FileInputStream"></a>字节文件输入流FileInputStream</h4><blockquote>
 <p>构造方法总共三个，记录其中两个<br>分别是，<br>FileInputStream(File file); 通过一个文件对象创建字节文件流<br>FileInputStream(String name); 通过文件路径名创建字节文件流</p>
 </blockquote>
-<h4 id="字节缓冲文件输入流BufferedInputStream"><a href="#字节缓冲文件输入流BufferedInputStream" class="headerlink" title="字节缓冲文件输入流BufferedInputStream"></a>字节缓冲文件输入流BufferedInputStream</h4><p>建立在InputStream上，通过提供流内缓冲数组来加快<strong>传输速度</strong></p>
+<h4 id="字节缓冲文件输入流BufferedInputStream"><a href="#字节缓冲文件输入流BufferedInputStream" class="headerlink" title="字节缓冲文件输入流BufferedInputStream"></a>字节缓冲文件输入流BufferedInputStream</h4><p>建立在InputStream上，通过提供流内缓冲数组来加快<strong>传输速度</strong>.</p>
 <blockquote>
 <p>构造方法总共两个<br>分别是，<br>BufferedInputStream(InputStream in); 在InputStream的基础上创建创建字节缓冲文件输入流<br>BufferedInputStream(InputStream, int size); 与以上构造方法的区别在于, size指定了流缓冲区域的大小</p>
 </blockquote>
@@ -405,7 +405,7 @@
 <h4 id="字节文件输出流FileOutputStream"><a href="#字节文件输出流FileOutputStream" class="headerlink" title="字节文件输出流FileOutputStream"></a>字节文件输出流FileOutputStream</h4><blockquote>
 <p>构造方法总共5个，记录4个<br>分别是，<br>FileOutputStream(File file); 通过文件对象创建字节文件输出流(每次创建清空该文件)<br>FileOutputStream(File file, boolean append); 同上，区别在于若append == ture,则不清空文件，并从文件末尾添加<br>FileOutputStream(String name); 通过文件路径名创建字节文件输出流(每次创建清空该文件)<br>FileOutputStream(String name, boolean append);同上，区别在于若append == ture,则不清空文件，并从文件末尾添加</p>
 </blockquote>
-<h4 id="字节缓冲文件输出流BufferedOutputStream"><a href="#字节缓冲文件输出流BufferedOutputStream" class="headerlink" title="字节缓冲文件输出流BufferedOutputStream"></a>字节缓冲文件输出流BufferedOutputStream</h4><p>建立在OutputStream上(组合关系)的缓冲流，使用的直接目的是<strong>传输速度显著提高</strong></p>
+<h4 id="字节缓冲文件输出流BufferedOutputStream"><a href="#字节缓冲文件输出流BufferedOutputStream" class="headerlink" title="字节缓冲文件输出流BufferedOutputStream"></a>字节缓冲文件输出流BufferedOutputStream</h4><p>建立在OutputStream上(组合关系)的缓冲流，使用的直接目的是<strong>传输速度显著提高</strong><br><em>重点注意之一,所有的Bufered*输出流，在调用写方法后，需要在适时的时候刷新，需要控制刷新防止最后部分数据没有被写出.</em></p>
 <blockquote>
 <p>构造方法有两个<br>分别是，<br>BufferedOutputStream(OutputStream out); 创建一个缓冲输出流<br>BufferedOutputStream(OutputStream out, int size); 创建一个指定缓冲区大小的缓冲输出流</p>
 </blockquote>
@@ -422,7 +422,7 @@
 <blockquote>
 <p>总共3个构造方法，记录其中两个<br>分别是，<br>FileReader(File file); 给定文件对象创建便捷文件字符输入流<br>FileReader(String fileName); 给定文件路径名创建便捷文件字符输入流</p>
 </blockquote>
-<h4 id="缓冲字符输入流BufferedReader"><a href="#缓冲字符输入流BufferedReader" class="headerlink" title="缓冲字符输入流BufferedReader"></a>缓冲字符输入流BufferedReader</h4><p>Buffered：作用同上，<strong>显著提高传输速度</strong>.<br>同时与以上输入流方法相比多了一个方法：<br>public String readLin(); 读取一行文本。以’\r’, ‘\n’,  ‘\r\n’为结束标志.</p>
+<h4 id="缓冲字符输入流BufferedReader"><a href="#缓冲字符输入流BufferedReader" class="headerlink" title="缓冲字符输入流BufferedReader"></a>缓冲字符输入流BufferedReader</h4><p>Buffered：作用同上，<strong>显著提高传输速度</strong>.<br><em>重点注意之一,所有的Bufered*输出流，在调用写方法后，需要在适时的时候刷新，需要控制刷新防止最后部分数据没有被写出.</em><br>同时与以上输入流方法相比多了一个方法：<br>public String readLin(); 读取一行文本。以’\r’, ‘\n’,  ‘\r\n’为结束标志.</p>
 <blockquote>
 <p>总共两个构造方法，<br>分别是，<br>BufferedReader(Reader in); 创建一个使用默认大小输入缓冲区的缓冲字符输入流<br>BufferedReader(Reader in, int sz); 指定缓冲去大小，其他同上一个方法相同</p>
 </blockquote>
@@ -442,7 +442,7 @@
 <h1 id="特殊流"><a href="#特殊流" class="headerlink" title="特殊流"></a>特殊流</h1><h2 id="“标准”输入输出流System-in-System-out"><a href="#“标准”输入输出流System-in-System-out" class="headerlink" title="“标准”输入输出流System.in/System.out"></a>“标准”输入输出流System.in/System.out</h2><blockquote>
 <p>public static final InputStream in;<br> (System.in) “标准”输入流，常用于键盘输入.<br>public staic final PrintSteam out; (System.out) “标准”输出流，常用于显示器输出.<br>（标准是引号的原因未知，jdk API1.7：”standard”）</p>
 </blockquote>
-<h2 id="打印字节流PrintStream-打印字符流PrintWrite"><a href="#打印字节流PrintStream-打印字符流PrintWrite" class="headerlink" title="打印字节流PrintStream/打印字符流PrintWrite"></a>打印字节流PrintStream/打印字符流PrintWrite</h2><p>PrintStream: 包装器，为其他输出流添加功能,使其能方便的打印各种数据值表示形式<br>PrintWrite: 实现类似C语言中的printf()函数的输出控制效果</p>
+<h2 id="打印字节流PrintStream-打印字符流PrintWrite"><a href="#打印字节流PrintStream-打印字符流PrintWrite" class="headerlink" title="打印字节流PrintStream/打印字符流PrintWrite"></a>打印字节流PrintStream/打印字符流PrintWrite</h2><p>重点区别之一，打印流可以在构造的时候指定开启自动刷新.<br>PrintStream: 包装器，为其他输出流添加功能,使其能方便的打印各种数据值表示形式<br>PrintWrite: 实现类似C语言中的printf()函数的输出控制效果</p>
 <h2 id="序列化流ObjectOutputStream-ObjectInputStream"><a href="#序列化流ObjectOutputStream-ObjectInputStream" class="headerlink" title="序列化流ObjectOutputStream/ObjectInputStream"></a>序列化流ObjectOutputStream/ObjectInputStream</h2><p>序列化流，用于保存和读入类信息，static 和 transient 声明的变量不被保存</p>
 <h1 id="其他流"><a href="#其他流" class="headerlink" title="其他流"></a>其他流</h1><h1 id="特别注释"><a href="#特别注释" class="headerlink" title="特别注释"></a>特别注释</h1><h2 id="文件类File"><a href="#文件类File" class="headerlink" title="文件类File"></a>文件类File</h2><p>创建管理文件以及目录,包含4种构造方法和非常多个成员方法</p>
 
@@ -476,6 +476,22 @@
       
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/10/Container/" rel="next" title="容器">
+                <i class="fa fa-chevron-left"></i> 容器
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
@@ -546,7 +562,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -578,7 +594,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
