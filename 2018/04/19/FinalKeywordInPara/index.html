@@ -99,25 +99,24 @@
 
 
 
-  <meta name="description" content="Collection&amp;lt;E&amp;gt;接口集合类型的根接口  总共有15种方法，记录其中常用的9个分别是，boolean add(E e); 向集合中添加元素eboolean addAll(Collection&amp;lt;？ extends E&amp;gt; c); 向集合中添加另一个集合中的全部元素，参数必须是同类或子类void clear(); 移除集合众所有元素boolean contains(Obj">
-<meta name="keywords" content="Java,Container">
+  <meta name="description" content="final关键字修饰形参的应用场景关键字： 成员方法中的内部类 局部变量 常量的生命周期这个问题的答案来自:StackOverFlow  Michael Borgwardtfinal参数的应用场景：    若该参数在传入成员方法的内部类中被使用，若不设置为final类型，则可能发生成员方法以及该临时变量参数引用被回收而内部类没被回收，内部类访问不存在的地址. Iterator&amp;lt;Integer">
 <meta property="og:type" content="article">
-<meta property="og:title" content="容器">
-<meta property="og:url" content="http://yoursite.com/2018/03/10/Container/index.html">
+<meta property="og:title" content="Tips about Final Para">
+<meta property="og:url" content="http://yoursite.com/2018/04/19/FinalKeywordInPara/index.html">
 <meta property="og:site_name" content="Insightcodeyk">
-<meta property="og:description" content="Collection&amp;lt;E&amp;gt;接口集合类型的根接口  总共有15种方法，记录其中常用的9个分别是，boolean add(E e); 向集合中添加元素eboolean addAll(Collection&amp;lt;？ extends E&amp;gt; c); 向集合中添加另一个集合中的全部元素，参数必须是同类或子类void clear(); 移除集合众所有元素boolean contains(Obj">
+<meta property="og:description" content="final关键字修饰形参的应用场景关键字： 成员方法中的内部类 局部变量 常量的生命周期这个问题的答案来自:StackOverFlow  Michael Borgwardtfinal参数的应用场景：    若该参数在传入成员方法的内部类中被使用，若不设置为final类型，则可能发生成员方法以及该临时变量参数引用被回收而内部类没被回收，内部类访问不存在的地址. Iterator&amp;lt;Integer">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-18T15:39:38.323Z">
+<meta property="og:updated_time" content="2018-04-18T16:34:43.971Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="容器">
-<meta name="twitter:description" content="Collection&amp;lt;E&amp;gt;接口集合类型的根接口  总共有15种方法，记录其中常用的9个分别是，boolean add(E e); 向集合中添加元素eboolean addAll(Collection&amp;lt;？ extends E&amp;gt; c); 向集合中添加另一个集合中的全部元素，参数必须是同类或子类void clear(); 移除集合众所有元素boolean contains(Obj">
+<meta name="twitter:title" content="Tips about Final Para">
+<meta name="twitter:description" content="final关键字修饰形参的应用场景关键字： 成员方法中的内部类 局部变量 常量的生命周期这个问题的答案来自:StackOverFlow  Michael Borgwardtfinal参数的应用场景：    若该参数在传入成员方法的内部类中被使用，若不设置为final类型，则可能发生成员方法以及该临时变量参数引用被回收而内部类没被回收，内部类访问不存在的地址. Iterator&amp;lt;Integer">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/03/10/Container/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/19/FinalKeywordInPara/"/>
 
 
 
@@ -127,7 +126,7 @@
   };
 </script>
 
-  <title>容器 | Insightcodeyk</title>
+  <title>Tips about Final Para | Insightcodeyk</title>
   
 
 
@@ -291,7 +290,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/10/Container/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/19/FinalKeywordInPara/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ke Yi">
@@ -308,7 +307,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">容器
+          <h1 class="post-title" itemprop="name headline">Tips about Final Para
               
             
           </h1>
@@ -327,7 +326,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-10T19:38:25+08:00">2018-03-10</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-19T00:22:11+08:00">2018-04-19</time>
             
 
             
@@ -348,7 +347,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JavaSummery/" itemprop="url" rel="index"><span itemprop="name">JavaSummery</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Tips/" itemprop="url" rel="index"><span itemprop="name">Tips</span></a></span>
 
                 
                 
@@ -382,45 +381,21 @@
       
 
       
-        <h1 id="Collection-lt-E-gt-接口"><a href="#Collection-lt-E-gt-接口" class="headerlink" title="Collection&lt;E&gt;接口"></a>Collection&lt;E&gt;接口</h1><p>集合类型的根接口</p>
-<blockquote>
-<p>总共有15种方法，记录其中常用的9个<br>分别是，<br>boolean add(E e); 向集合中添加元素e<br>boolean addAll(Collection&lt;？ extends E&gt; c); 向集合中添加另一个集合中的全部元素，参数必须是同类或子类<br>void clear(); 移除集合众所有元素<br>boolean contains(Object o); 查找指定元素<br>boolean containsAll(Conllection&lt;?&gt; c) 判断集合c是否是该集合的子集<br>boolean isEmpty(); 判断集合是否为空<br>Iterator<e> iterator(); 获取该集合的迭代器<br>boolean remove(Object o); 从集合众删除指定元素<br>int size(); 返回集合中元素个数</e></p>
-</blockquote>
-<h2 id="List-lt-E-gt-接口"><a href="#List-lt-E-gt-接口" class="headerlink" title="List&lt;E&gt;接口"></a>List&lt;E&gt;接口</h2><p>有序集合接口，继承自Collcetion，可实现随机查找，List判断相等用Object.equals()方法</p>
-<blockquote>
-<p>记录其不同于Collcetion的部分方法,<br>分别是，<br>boolean add(E e); 向列表<strong>尾部</strong>添加指定元素<br>void add(int index, E element); 在列表的指定位置插入指定元素<br>E get(int index); 获取列表中指定位置的元素<br>int indexOf(Object o); 获取指定元素的第一个索引位<br>int lastIndexOf(Object o); 获取指定元素的最后一个索引位<br>ListIterator<e> listIterator(int index); 返回列表的迭代器，从index位置开始<br>E set(int index, E element); 用指定元素替代Index位置的元素</e></p>
-</blockquote>
-<h3 id="ArrayList-lt-E-gt-类"><a href="#ArrayList-lt-E-gt-类" class="headerlink" title="ArrayList&lt;E&gt;类"></a>ArrayList&lt;E&gt;类</h3><p>实现动态数组效果的List子类，线程不安全（不同步）</p>
-<blockquote>
-<p>总共3个构造方法，<br>分别是，<br>ArrayList(); 构造初始容量为10的空列表<br>ArrayList(Collection&lt;? extens E&gt; c); 用指定列表c构造新列表<br>ArrayList(int initialCapacity); 构造指定初始容量initialCapacity的空列表</p>
-</blockquote>
-<blockquote>
-<p>不同于其父类接口的主要方法：<br>void trimToSize(); 将ArrayList容量调整为列表当前大小</p>
-</blockquote>
-<h3 id="Vector-lt-E-gt-类"><a href="#Vector-lt-E-gt-类" class="headerlink" title="Vector&lt;E&gt;类"></a>Vector&lt;E&gt;类</h3><p>实现动态数组，和ArrayList类在大部分情况下拥有相同的方法，重要区别在于，线程安全（同步）</p>
-<h3 id="LinkedList-lt-E-gt-类"><a href="#LinkedList-lt-E-gt-类" class="headerlink" title="LinkedList&lt;E&gt;类"></a>LinkedList&lt;E&gt;类</h3><p>List接口的链表实现，插入删除效率较高，方法没有太多区别</p>
-<h3 id="Stack-lt-E-gt-类"><a href="#Stack-lt-E-gt-类" class="headerlink" title="Stack&lt;E&gt;类"></a>Stack&lt;E&gt;类</h3><p>实现栈结构</p>
-<blockquote>
-<p>总共有5个方法<br>分别是,<br>boolean empty(); 测试是否栈空<br>E peek(); 查看栈顶元素<br>E POP(); 出栈<br>E push(E itme); 压栈<br>int search(Object); 返回对象在栈中位置</p>
-</blockquote>
-<h2 id="Set-lt-E-gt-接口"><a href="#Set-lt-E-gt-接口" class="headerlink" title="Set&lt;E&gt;接口"></a>Set&lt;E&gt;接口</h2><p>特点：不包含重复元素的集合，<strong>重复的定义：</strong>e1.equals(e2)，这意味着当我们重写了equals方法Set将会接受不同的重复规则.</p>
-<h3 id="HashSet-lt-E-gt-类"><a href="#HashSet-lt-E-gt-类" class="headerlink" title="HashSet&lt;E&gt;类"></a>HashSet&lt;E&gt;类</h3><p>用HashMap实现的Set，特点是不维护序列，有点事有非常高的查找效率</p>
-<h3 id="TreeSet-lt-E-gt-类"><a href="#TreeSet-lt-E-gt-类" class="headerlink" title="TreeSet&lt;E&gt;类"></a>TreeSet&lt;E&gt;类</h3><p>用红黑树实现的Set，特点是维护了序列</p>
-<h3 id="LinkedHashSet-lt-E-gt-类"><a href="#LinkedHashSet-lt-E-gt-类" class="headerlink" title="LinkedHashSet&lt;E&gt;类"></a>LinkedHashSet&lt;E&gt;类</h3><p>一个折中的Set，维护了序列，也用了Hash </p>
-<h2 id="Queue-lt-E-gt-接口"><a href="#Queue-lt-E-gt-接口" class="headerlink" title="Queue&lt;E&gt;接口"></a>Queue&lt;E&gt;接口</h2><p>实现队列操作的接口，其子类包括队列的常用操作方法</p>
-<blockquote>
-<p>boolean add(E e); 也就是队列的入队操作<br>E element(); 获取但不出队操作<br>E poll(); 也就是出队操作，队列为空则返回nul</p>
-</blockquote>
-<h1 id="Map-lt-K-V-gt-接口"><a href="#Map-lt-K-V-gt-接口" class="headerlink" title="Map&lt;K,V&gt;接口"></a>Map&lt;K,V&gt;接口</h1><p>键值对类型的集合，小数据库</p>
-<h2 id="AbstractMap-lt-K-V-gt-类"><a href="#AbstractMap-lt-K-V-gt-类" class="headerlink" title="AbstractMap&lt;K,V&gt;类"></a>AbstractMap&lt;K,V&gt;类</h2><p>提供Map接口的主要功能的实现</p>
-<blockquote>
-<p>主要记录部分方法，<br>分别是，<br>V get(Object key); 返回指定键所映射的值；如果没有不包含键的映射关系，返回bull。是否允许Key值为null，可以在具体使用的子类中控制<br>Set<k> keySet(); 获得Map中包含的键值集合<br>V put(K key, V value); 向Map中添加一对新的键值对关系，若该键已经存在，则更新该键值对<br>V remove(Object key); 若存在该键，则从Map中删除该键值对，如果没有则返回null(在不允许null的Map中)</k></p>
-</blockquote>
-<h3 id="HashMap类"><a href="#HashMap类" class="headerlink" title="HashMap类"></a>HashMap类</h3><p>基于哈希表的Map实现类，使用最为频繁的Map，<strong>允许使用null作为键和值</strong>.</p>
-<blockquote>
-<p>总共有4个构造函数<br>分别是，<br>HashMap(); 默认初始容量16，默认加载因子0.75,一般不改加载因子<br>HashMap(int initialCapacity); 指定初始容量<br>HashMap(int initialCapacity, float loadFactor); 指定初始容量和加载因子<br>HashMap(Map&lt;? extends K, ? extends V&gt; m); 用m构造相同的Map<br>成员方法和其父类接口相同</p>
-</blockquote>
-<h3 id="TreeMap类"><a href="#TreeMap类" class="headerlink" title="TreeMap类"></a>TreeMap类</h3><p>维护了一个顺序序列的集合，也就是说当用Iterator迭代器获取Map.Entry对象迭代的时候，迭代顺序和存入顺序是相同的</p>
+        <h2 id="final关键字修饰形参的应用场景"><a href="#final关键字修饰形参的应用场景" class="headerlink" title="final关键字修饰形参的应用场景"></a>final关键字修饰形参的应用场景</h2><h3 id="关键字：-成员方法中的内部类-局部变量-常量的生命周期"><a href="#关键字：-成员方法中的内部类-局部变量-常量的生命周期" class="headerlink" title="关键字： 成员方法中的内部类 局部变量 常量的生命周期"></a>关键字： 成员方法中的内部类 局部变量 常量的生命周期</h3><p>这个问题的答案来自:<br><a href="https://stackoverflow.com/questions/500508/why-should-i-use-the-keyword-final-on-a-method-parameter-in-java" target="_blank" rel="noopener">StackOverFlow</a>  Michael Borgwardt<br>final参数的应用场景：<br>    若该参数在传入成员方法的内部类中被使用，若不设置为final类型，则可能发生成员方法以及该临时变量参数引用被回收而内部类没被回收，内部类访问不存在的地址.</p>
+<pre><code>Iterator&lt;Integer&gt; createIntegerIterator(final int from, final int to) {
+    return new Iterator&lt;Integer&gt;() {
+        int index = from;
+        public Integer next() {
+            return index++;
+        }
+
+        public boolean hasNext() {
+            return index &lt;= to;
+        }
+        // remove method omitted
+    };
+}
+</code></pre><p>在这个例子中，传入参数from, to在匿名内部类中被使用，改类中的方法调用的时候，这两个参数若不为final，则其引用在这个createIntegerIterator方法执行完之后就会被回收.<br>也就是说，成员方法内部类的生命周期长于成员方法本身，因此，内部类使用的成员方法中定义的变量生命周期必须等于或长于内部类，final变量就是很好的解决方案。<br>需要<strong>特别注意</strong>的是，现在即便这个参数不声明为final也可以运行，原因是因为，编译器帮我做了这件事，当我们看查反编译的字节码文件时，可以发现，编译器帮我们补上了final关键字.</p>
 
       
     </div>
@@ -439,14 +414,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/Java/" rel="tag"># Java</a>
-          
-            <a href="/tags/Container/" rel="tag"># Container</a>
-          
-        </div>
-      
 
       
       
@@ -456,14 +423,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/03/12/Container/" rel="next" title="容器">
+                <i class="fa fa-chevron-left"></i> 容器
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/03/16/Stream/" rel="prev" title="流">
-                流 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/04/19/HashMap/" rel="prev" title="HashMap">
+                HashMap <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -538,7 +509,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -553,7 +524,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -622,7 +597,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Collection-lt-E-gt-接口"><span class="nav-number">1.</span> <span class="nav-text">Collection&lt;E&gt;接口</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#List-lt-E-gt-接口"><span class="nav-number">1.1.</span> <span class="nav-text">List&lt;E&gt;接口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ArrayList-lt-E-gt-类"><span class="nav-number">1.1.1.</span> <span class="nav-text">ArrayList&lt;E&gt;类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vector-lt-E-gt-类"><span class="nav-number">1.1.2.</span> <span class="nav-text">Vector&lt;E&gt;类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LinkedList-lt-E-gt-类"><span class="nav-number">1.1.3.</span> <span class="nav-text">LinkedList&lt;E&gt;类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Stack-lt-E-gt-类"><span class="nav-number">1.1.4.</span> <span class="nav-text">Stack&lt;E&gt;类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Set-lt-E-gt-接口"><span class="nav-number">1.2.</span> <span class="nav-text">Set&lt;E&gt;接口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HashSet-lt-E-gt-类"><span class="nav-number">1.2.1.</span> <span class="nav-text">HashSet&lt;E&gt;类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TreeSet-lt-E-gt-类"><span class="nav-number">1.2.2.</span> <span class="nav-text">TreeSet&lt;E&gt;类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LinkedHashSet-lt-E-gt-类"><span class="nav-number">1.2.3.</span> <span class="nav-text">LinkedHashSet&lt;E&gt;类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Queue-lt-E-gt-接口"><span class="nav-number">1.3.</span> <span class="nav-text">Queue&lt;E&gt;接口</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Map-lt-K-V-gt-接口"><span class="nav-number">2.</span> <span class="nav-text">Map&lt;K,V&gt;接口</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#AbstractMap-lt-K-V-gt-类"><span class="nav-number">2.1.</span> <span class="nav-text">AbstractMap&lt;K,V&gt;类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HashMap类"><span class="nav-number">2.1.1.</span> <span class="nav-text">HashMap类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TreeMap类"><span class="nav-number">2.1.2.</span> <span class="nav-text">TreeMap类</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#final关键字修饰形参的应用场景"><span class="nav-number">1.</span> <span class="nav-text">final关键字修饰形参的应用场景</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#关键字：-成员方法中的内部类-局部变量-常量的生命周期"><span class="nav-number">1.1.</span> <span class="nav-text">关键字： 成员方法中的内部类 局部变量 常量的生命周期</span></a></li></ol></li></ol></div>
             
 
           </div>
