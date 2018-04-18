@@ -460,7 +460,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 <a class="post-title-link" href="/2018/04/19/FinalKeywordInPara/" itemprop="url">
-                  Tips about Final Para
+                  final关键字修饰形参的应用场景
                 </a>
               
             
@@ -537,7 +537,7 @@
       
         
           
-            <h2 id="final关键字修饰形参的应用场景"><a href="#final关键字修饰形参的应用场景" class="headerlink" title="final关键字修饰形参的应用场景"></a>final关键字修饰形参的应用场景</h2><h3 id="关键字：-成员方法中的内部类-局部变量-常量的生命周期"><a href="#关键字：-成员方法中的内部类-局部变量-常量的生命周期" class="headerlink" title="关键字： 成员方法中的内部类 局部变量 常量的生命周期"></a>关键字： 成员方法中的内部类 局部变量 常量的生命周期</h3><p>这个问题的答案来自:<br><a href="https://stackoverflow.com/questions/500508/why-should-i-use-the-keyword-final-on-a-method-parameter-in-java" target="_blank" rel="noopener">StackOverFlow</a>  Michael Borgwardt<br>final参数的应用场景：<br>    若该参数在传入成员方法的内部类中被使用，若不设置为final类型，则可能发生成员方法以及该临时变量参数引用被回收而内部类没被回收，内部类访问不存在的地址.</p>
+            <h3 id="关键字：-成员方法中的内部类-局部变量-常量的生命周期"><a href="#关键字：-成员方法中的内部类-局部变量-常量的生命周期" class="headerlink" title="关键字： 成员方法中的内部类 局部变量 常量的生命周期"></a>关键字： 成员方法中的内部类 局部变量 常量的生命周期</h3><p>这个问题的答案来自:<br><a href="https://stackoverflow.com/questions/500508/why-should-i-use-the-keyword-final-on-a-method-parameter-in-java" target="_blank" rel="noopener">StackOverFlow</a>  Michael Borgwardt<br>final参数的应用场景：<br>    若该参数在传入成员方法的内部类中被使用，若不设置为final类型，则可能发生成员方法以及该临时变量参数引用被回收而内部类没被回收，内部类访问不存在的地址.</p>
 <pre><code>Iterator&lt;Integer&gt; createIntegerIterator(final int from, final int to) {
     return new Iterator&lt;Integer&gt;() {
         int index = from;
