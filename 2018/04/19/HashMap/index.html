@@ -99,18 +99,18 @@
 
 
 
-  <meta name="description" content="HashMap机制与要点Object.HashCode()HashMap逻辑结构HashMap实现要点JDK1.7,JDK1.8的区别Tips and HighLight">
+  <meta name="description" content="HashMap机制与要点1 Object.HashCode()2 HashMap逻辑结构3 HashMap实现要点4 JDK1.7,JDK1.8的区别5 Tips and HighLight">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HashMap">
 <meta property="og:url" content="http://yoursite.com/2018/04/19/HashMap/index.html">
 <meta property="og:site_name" content="Insightcodeyk">
-<meta property="og:description" content="HashMap机制与要点Object.HashCode()HashMap逻辑结构HashMap实现要点JDK1.7,JDK1.8的区别Tips and HighLight">
+<meta property="og:description" content="HashMap机制与要点1 Object.HashCode()2 HashMap逻辑结构3 HashMap实现要点4 JDK1.7,JDK1.8的区别5 Tips and HighLight">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-18T16:34:44.900Z">
+<meta property="og:updated_time" content="2018-04-19T03:06:38.684Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HashMap">
-<meta name="twitter:description" content="HashMap机制与要点Object.HashCode()HashMap逻辑结构HashMap实现要点JDK1.7,JDK1.8的区别Tips and HighLight">
+<meta name="twitter:description" content="HashMap机制与要点1 Object.HashCode()2 HashMap逻辑结构3 HashMap实现要点4 JDK1.7,JDK1.8的区别5 Tips and HighLight">
 
 
 
@@ -382,7 +382,7 @@
       
 
       
-        <h1 id="HashMap机制与要点"><a href="#HashMap机制与要点" class="headerlink" title="HashMap机制与要点"></a>HashMap机制与要点</h1><h2 id="Object-HashCode"><a href="#Object-HashCode" class="headerlink" title="Object.HashCode()"></a>Object.HashCode()</h2><h2 id="HashMap逻辑结构"><a href="#HashMap逻辑结构" class="headerlink" title="HashMap逻辑结构"></a>HashMap逻辑结构</h2><h2 id="HashMap实现要点"><a href="#HashMap实现要点" class="headerlink" title="HashMap实现要点"></a>HashMap实现要点</h2><h2 id="JDK1-7-JDK1-8的区别"><a href="#JDK1-7-JDK1-8的区别" class="headerlink" title="JDK1.7,JDK1.8的区别"></a>JDK1.7,JDK1.8的区别</h2><h2 id="Tips-and-HighLight"><a href="#Tips-and-HighLight" class="headerlink" title="Tips and HighLight"></a>Tips and HighLight</h2>
+        <h1 id="HashMap机制与要点"><a href="#HashMap机制与要点" class="headerlink" title="HashMap机制与要点"></a>HashMap机制与要点</h1><h2 id="1-Object-HashCode"><a href="#1-Object-HashCode" class="headerlink" title="1 Object.HashCode()"></a>1 Object.HashCode()</h2><h2 id="2-HashMap逻辑结构"><a href="#2-HashMap逻辑结构" class="headerlink" title="2 HashMap逻辑结构"></a>2 HashMap逻辑结构</h2><h2 id="3-HashMap实现要点"><a href="#3-HashMap实现要点" class="headerlink" title="3 HashMap实现要点"></a>3 HashMap实现要点</h2><h2 id="4-JDK1-7-JDK1-8的区别"><a href="#4-JDK1-7-JDK1-8的区别" class="headerlink" title="4 JDK1.7,JDK1.8的区别"></a>4 JDK1.7,JDK1.8的区别</h2><h2 id="5-Tips-and-HighLight"><a href="#5-Tips-and-HighLight" class="headerlink" title="5 Tips and HighLight"></a>5 Tips and HighLight</h2>
       
     </div>
 
@@ -585,7 +585,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HashMap机制与要点"><span class="nav-number">1.</span> <span class="nav-text">HashMap机制与要点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Object-HashCode"><span class="nav-number">1.1.</span> <span class="nav-text">Object.HashCode()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HashMap逻辑结构"><span class="nav-number">1.2.</span> <span class="nav-text">HashMap逻辑结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HashMap实现要点"><span class="nav-number">1.3.</span> <span class="nav-text">HashMap实现要点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JDK1-7-JDK1-8的区别"><span class="nav-number">1.4.</span> <span class="nav-text">JDK1.7,JDK1.8的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tips-and-HighLight"><span class="nav-number">1.5.</span> <span class="nav-text">Tips and HighLight</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HashMap机制与要点"><span class="nav-text">HashMap机制与要点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Object-HashCode"><span class="nav-text">1 Object.HashCode()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-HashMap逻辑结构"><span class="nav-text">2 HashMap逻辑结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-HashMap实现要点"><span class="nav-text">3 HashMap实现要点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-JDK1-7-JDK1-8的区别"><span class="nav-text">4 JDK1.7,JDK1.8的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Tips-and-HighLight"><span class="nav-text">5 Tips and HighLight</span></a></li></ol></li></ol></div>
             
 
           </div>
