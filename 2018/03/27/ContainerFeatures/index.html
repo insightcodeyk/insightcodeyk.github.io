@@ -107,7 +107,7 @@
 <meta property="og:site_name" content="Insightcodeyk">
 <meta property="og:description" content="作者: insightcodeyk出处: https://insightcodeyk.github.io/2018/03/27/ContainerFeatures/声明: 本文采用以下协议进行授权: 自由转载-非商用-非衍生-保持署名|Creative Commons BY-NC-ND 3.0,转载请注明作者及出处。 1 数组 和 Arrays谈到Collection和Map之前，首先要提到数组。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-29T15:37:31.348Z">
+<meta property="og:updated_time" content="2018-04-29T15:39:40.499Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="容器特点和应用场景">
 <meta name="twitter:description" content="作者: insightcodeyk出处: https://insightcodeyk.github.io/2018/03/27/ContainerFeatures/声明: 本文采用以下协议进行授权: 自由转载-非商用-非衍生-保持署名|Creative Commons BY-NC-ND 3.0,转载请注明作者及出处。 1 数组 和 Arrays谈到Collection和Map之前，首先要提到数组。">
@@ -395,7 +395,7 @@
 <p>HashMap:基于哈希表的Map，无序<br>TreeMap:基于红黑树的Map，有序</p>
 </blockquote>
 <h1 id="3-默认优先选择"><a href="#3-默认优先选择" class="headerlink" title="3 默认优先选择"></a>3 默认优先选择</h1><h2 id="3-1-List结构"><a href="#3-1-List结构" class="headerlink" title="3.1 List结构"></a>3.1 List结构</h2><p>默认选择:  ArrayList<br>插入删除频繁:  LinkedList<br>作为多线程公共资源:  Vector(开发中不推荐用，资源消耗太大，多线程问题是另一问题，在concurrent包或者Collections工具类中通过其他方式实现)</p>
-<h2 id="3-2-Set结构"><a href="#3-2-Set结构" class="headerlink" title="3.2 Set结构"></a>3.2 Set结构</h2><p>默认选择:  HashSet（由HashMap,value指向一个静态Object类常量present）<br>对数据顺序有要求（<strong>不是插入顺序</strong>）:  TreeSet</p>
+<h2 id="3-2-Set结构"><a href="#3-2-Set结构" class="headerlink" title="3.2 Set结构"></a>3.2 Set结构</h2><p>默认选择:  HashSet（由HashMap,value指向一个静态Object类常量PRESENT）<br>对数据顺序有要求（<strong>不是插入顺序</strong>）:  TreeSet</p>
 <h2 id="3-2-Map结构"><a href="#3-2-Map结构" class="headerlink" title="3.2 Map结构"></a>3.2 Map结构</h2><p>默认选择:  HashMap<br>对数据顺序有要求(<strong>不是插入顺序</strong>):  TreeMap</p>
 <h1 id="4-容器框架常用api和注意事项"><a href="#4-容器框架常用api和注意事项" class="headerlink" title="4 容器框架常用api和注意事项"></a>4 容器框架常用api和注意事项</h1><p><a href="https://insightcodeyk.github.io/2018/03/12/Container/" target="_blank" rel="noopener">https://insightcodeyk.github.io/2018/03/12/Container/</a></p>
 

@@ -716,7 +716,7 @@
 <p>HashMap:基于哈希表的Map，无序<br>TreeMap:基于红黑树的Map，有序</p>
 </blockquote>
 <h1 id="3-默认优先选择"><a href="#3-默认优先选择" class="headerlink" title="3 默认优先选择"></a>3 默认优先选择</h1><h2 id="3-1-List结构"><a href="#3-1-List结构" class="headerlink" title="3.1 List结构"></a>3.1 List结构</h2><p>默认选择:  ArrayList<br>插入删除频繁:  LinkedList<br>作为多线程公共资源:  Vector(开发中不推荐用，资源消耗太大，多线程问题是另一问题，在concurrent包或者Collections工具类中通过其他方式实现)</p>
-<h2 id="3-2-Set结构"><a href="#3-2-Set结构" class="headerlink" title="3.2 Set结构"></a>3.2 Set结构</h2><p>默认选择:  HashSet（由HashMap,value指向一个静态Object类常量present）<br>对数据顺序有要求（<strong>不是插入顺序</strong>）:  TreeSet</p>
+<h2 id="3-2-Set结构"><a href="#3-2-Set结构" class="headerlink" title="3.2 Set结构"></a>3.2 Set结构</h2><p>默认选择:  HashSet（由HashMap,value指向一个静态Object类常量PRESENT）<br>对数据顺序有要求（<strong>不是插入顺序</strong>）:  TreeSet</p>
 <h2 id="3-2-Map结构"><a href="#3-2-Map结构" class="headerlink" title="3.2 Map结构"></a>3.2 Map结构</h2><p>默认选择:  HashMap<br>对数据顺序有要求(<strong>不是插入顺序</strong>):  TreeMap</p>
 <h1 id="4-容器框架常用api和注意事项"><a href="#4-容器框架常用api和注意事项" class="headerlink" title="4 容器框架常用api和注意事项"></a>4 容器框架常用api和注意事项</h1><p><a href="https://insightcodeyk.github.io/2018/03/12/Container/" target="_blank" rel="noopener">https://insightcodeyk.github.io/2018/03/12/Container/</a></p>
 
