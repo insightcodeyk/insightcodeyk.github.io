@@ -99,17 +99,17 @@
 
 
 
-  <meta name="description" content="关键字： 成员方法中的内部类 局部变量 常量的生命周期这个问题的答案来自:StackOverFlow  Michael Borgwardtfinal参数的应用场景：    若该参数在传入成员方法的内部类中被使用，若不设置为final类型，则可能发生成员方法以及该临时变量参数引用被回收而内部类没被回收，内部类访问不存在的地址. Iterator&amp;lt;Integer&amp;gt; createIntege">
+  <meta name="description" content="作者: insightcodeyk出处: https://insightcodeyk.github.io/2018/04/19/FinalKeywordInPara/声明: 本文采用以下协议进行授权: 自由转载-非商用-非衍生-保持署名|Creative Commons BY-NC-ND 3.0,转载请注明作者及出处。 关键字： 成员方法中的内部类 局部变量 常量的生命周期这个问题的答案来自:St">
 <meta property="og:type" content="article">
 <meta property="og:title" content="final关键字修饰形参的应用场景">
 <meta property="og:url" content="http://yoursite.com/2018/04/19/FinalKeywordInPara/index.html">
 <meta property="og:site_name" content="Insightcodeyk">
-<meta property="og:description" content="关键字： 成员方法中的内部类 局部变量 常量的生命周期这个问题的答案来自:StackOverFlow  Michael Borgwardtfinal参数的应用场景：    若该参数在传入成员方法的内部类中被使用，若不设置为final类型，则可能发生成员方法以及该临时变量参数引用被回收而内部类没被回收，内部类访问不存在的地址. Iterator&amp;lt;Integer&amp;gt; createIntege">
+<meta property="og:description" content="作者: insightcodeyk出处: https://insightcodeyk.github.io/2018/04/19/FinalKeywordInPara/声明: 本文采用以下协议进行授权: 自由转载-非商用-非衍生-保持署名|Creative Commons BY-NC-ND 3.0,转载请注明作者及出处。 关键字： 成员方法中的内部类 局部变量 常量的生命周期这个问题的答案来自:St">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-18T16:38:54.197Z">
+<meta property="og:updated_time" content="2018-04-29T13:53:39.381Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="final关键字修饰形参的应用场景">
-<meta name="twitter:description" content="关键字： 成员方法中的内部类 局部变量 常量的生命周期这个问题的答案来自:StackOverFlow  Michael Borgwardtfinal参数的应用场景：    若该参数在传入成员方法的内部类中被使用，若不设置为final类型，则可能发生成员方法以及该临时变量参数引用被回收而内部类没被回收，内部类访问不存在的地址. Iterator&amp;lt;Integer&amp;gt; createIntege">
+<meta name="twitter:description" content="作者: insightcodeyk出处: https://insightcodeyk.github.io/2018/04/19/FinalKeywordInPara/声明: 本文采用以下协议进行授权: 自由转载-非商用-非衍生-保持署名|Creative Commons BY-NC-ND 3.0,转载请注明作者及出处。 关键字： 成员方法中的内部类 局部变量 常量的生命周期这个问题的答案来自:St">
 
 
 
@@ -381,7 +381,8 @@
       
 
       
-        <h3 id="关键字：-成员方法中的内部类-局部变量-常量的生命周期"><a href="#关键字：-成员方法中的内部类-局部变量-常量的生命周期" class="headerlink" title="关键字： 成员方法中的内部类 局部变量 常量的生命周期"></a>关键字： 成员方法中的内部类 局部变量 常量的生命周期</h3><p>这个问题的答案来自:<br><a href="https://stackoverflow.com/questions/500508/why-should-i-use-the-keyword-final-on-a-method-parameter-in-java" target="_blank" rel="noopener">StackOverFlow</a>  Michael Borgwardt<br>final参数的应用场景：<br>    若该参数在传入成员方法的内部类中被使用，若不设置为final类型，则可能发生成员方法以及该临时变量参数引用被回收而内部类没被回收，内部类访问不存在的地址.</p>
+        <p>作者: insightcodeyk<br>出处: <a href="https://insightcodeyk.github.io/2018/04/19/FinalKeywordInPara/" target="_blank" rel="noopener">https://insightcodeyk.github.io/2018/04/19/FinalKeywordInPara/</a><br>声明: 本文采用以下协议进行授权: <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh" target="_blank" rel="noopener">自由转载-非商用-非衍生-保持署名|Creative Commons BY-NC-ND 3.0</a>,转载请注明作者及出处。</p>
+<h3 id="关键字：-成员方法中的内部类-局部变量-常量的生命周期"><a href="#关键字：-成员方法中的内部类-局部变量-常量的生命周期" class="headerlink" title="关键字： 成员方法中的内部类 局部变量 常量的生命周期"></a>关键字： 成员方法中的内部类 局部变量 常量的生命周期</h3><p>这个问题的答案来自:<br><a href="https://stackoverflow.com/questions/500508/why-should-i-use-the-keyword-final-on-a-method-parameter-in-java" target="_blank" rel="noopener">StackOverFlow</a>  Michael Borgwardt<br>final参数的应用场景：<br>    若该参数在传入成员方法的内部类中被使用，若不设置为final类型，则可能发生成员方法以及该临时变量参数引用被回收而内部类没被回收，内部类访问不存在的地址.</p>
 <pre><code>Iterator&lt;Integer&gt; createIntegerIterator(final int from, final int to) {
     return new Iterator&lt;Integer&gt;() {
         int index = from;

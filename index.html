@@ -537,7 +537,8 @@
       
         
           
-            <h3 id="关键字：-成员方法中的内部类-局部变量-常量的生命周期"><a href="#关键字：-成员方法中的内部类-局部变量-常量的生命周期" class="headerlink" title="关键字： 成员方法中的内部类 局部变量 常量的生命周期"></a>关键字： 成员方法中的内部类 局部变量 常量的生命周期</h3><p>这个问题的答案来自:<br><a href="https://stackoverflow.com/questions/500508/why-should-i-use-the-keyword-final-on-a-method-parameter-in-java" target="_blank" rel="noopener">StackOverFlow</a>  Michael Borgwardt<br>final参数的应用场景：<br>    若该参数在传入成员方法的内部类中被使用，若不设置为final类型，则可能发生成员方法以及该临时变量参数引用被回收而内部类没被回收，内部类访问不存在的地址.</p>
+            <p>作者: insightcodeyk<br>出处: <a href="https://insightcodeyk.github.io/2018/04/19/FinalKeywordInPara/" target="_blank" rel="noopener">https://insightcodeyk.github.io/2018/04/19/FinalKeywordInPara/</a><br>声明: 本文采用以下协议进行授权: <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh" target="_blank" rel="noopener">自由转载-非商用-非衍生-保持署名|Creative Commons BY-NC-ND 3.0</a>,转载请注明作者及出处。</p>
+<h3 id="关键字：-成员方法中的内部类-局部变量-常量的生命周期"><a href="#关键字：-成员方法中的内部类-局部变量-常量的生命周期" class="headerlink" title="关键字： 成员方法中的内部类 局部变量 常量的生命周期"></a>关键字： 成员方法中的内部类 局部变量 常量的生命周期</h3><p>这个问题的答案来自:<br><a href="https://stackoverflow.com/questions/500508/why-should-i-use-the-keyword-final-on-a-method-parameter-in-java" target="_blank" rel="noopener">StackOverFlow</a>  Michael Borgwardt<br>final参数的应用场景：<br>    若该参数在传入成员方法的内部类中被使用，若不设置为final类型，则可能发生成员方法以及该临时变量参数引用被回收而内部类没被回收，内部类访问不存在的地址.</p>
 <pre><code>Iterator&lt;Integer&gt; createIntegerIterator(final int from, final int to) {
     return new Iterator&lt;Integer&gt;() {
         int index = from;
@@ -702,7 +703,8 @@
       
         
           
-            <h1 id="1-Collection-lt-E-gt-接口"><a href="#1-Collection-lt-E-gt-接口" class="headerlink" title="1 Collection&lt;E&gt;接口"></a>1 Collection&lt;E&gt;接口</h1><p>集合类型的根接口</p>
+            <p>作者: insightcodeyk<br>出处: <a href="https://insightcodeyk.github.io/2018/03/12/Container" target="_blank" rel="noopener">https://insightcodeyk.github.io/2018/03/12/Container/</a><br>声明: 本文采用以下协议进行授权: <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh" target="_blank" rel="noopener">自由转载-非商用-非衍生-保持署名|Creative Commons BY-NC-ND 3.0</a>,转载请注明作者及出处。</p>
+<h1 id="1-Collection-lt-E-gt-接口"><a href="#1-Collection-lt-E-gt-接口" class="headerlink" title="1 Collection&lt;E&gt;接口"></a>1 Collection&lt;E&gt;接口</h1><p>集合类型的根接口</p>
 <blockquote>
 <p>总共有15种方法，记录其中常用的9个<br>分别是，<br>boolean add(E e); 向集合中添加元素e<br>boolean addAll(Collection&lt;？ extends E&gt; c); 向集合中添加另一个集合中的全部元素，参数必须是同类或子类<br>void clear(); 移除集合众所有元素<br>boolean contains(Object o); 查找指定元素<br>boolean containsAll(Conllection&lt;?&gt; c) 判断集合c是否是该集合的子集<br>boolean isEmpty(); 判断集合是否为空<br>Iterator<e> iterator(); 获取该集合的迭代器<br>boolean remove(Object o); 从集合众删除指定元素<br>int size(); 返回集合中元素个数</e></p>
 </blockquote>
@@ -891,7 +893,8 @@
       
         
           
-            <h4 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h4><p>流是一组有序的数据序列，有两种分类方式：</p>
+            <p>作者: insightcodeyk<br>出处: <a href="https://insightcodeyk.github.io/2018/03/10/Stream/" target="_blank" rel="noopener">https://insightcodeyk.github.io/2018/03/10/Stream/</a><br>声明: 本文采用以下协议进行授权: <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh" target="_blank" rel="noopener">自由转载-非商用-非衍生-保持署名|Creative Commons BY-NC-ND 3.0</a>,转载请注明作者及出处。</p>
+<h4 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h4><p>流是一组有序的数据序列，有两种分类方式：</p>
 <blockquote>
 <p>根据操作的类型，分为 输入流 和 输出流<br>根据传输内容类型，分为 字节流 和 字符流</p>
 </blockquote>
