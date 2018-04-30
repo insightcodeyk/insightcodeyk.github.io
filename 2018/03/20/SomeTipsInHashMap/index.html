@@ -99,25 +99,25 @@
 
 
 
-  <meta name="description" content="作者: insightcodeyk出处: https://insightcodeyk.github.io/2018/04/19/FinalKeywordInPara/声明: 本文采用以下协议进行授权: 自由转载-非商用-非衍生-保持署名|Creative Commons BY-NC-ND 3.0,转载请注明作者及出处。 关键字： 成员方法中的内部类 局部变量 常量的生命周期这个问题的答案来自:St">
-<meta name="keywords" content="Java">
+  <meta name="description" content="作者: insightcodeyk出处: https://insightcodeyk.github.io/声明: 本文采用以下协议进行授权: 自由转载-非商用-非衍生-保持署名|Creative Commons BY-NC-ND 3.0,转载请注明作者及出处。 关于HashMap的详细解析请阅读以下文章HashMap机制与要点 1 HashMap中的”相等”语义JDK1.8中HashMap判断两个">
+<meta name="keywords" content="Java,Container">
 <meta property="og:type" content="article">
-<meta property="og:title" content="final关键字修饰形参的应用场景">
-<meta property="og:url" content="http://yoursite.com/2018/04/19/FinalKeywordInPara/index.html">
+<meta property="og:title" content="一些关于HashMap的思考">
+<meta property="og:url" content="http://yoursite.com/2018/03/20/SomeTipsInHashMap/index.html">
 <meta property="og:site_name" content="Insightcodeyk">
-<meta property="og:description" content="作者: insightcodeyk出处: https://insightcodeyk.github.io/2018/04/19/FinalKeywordInPara/声明: 本文采用以下协议进行授权: 自由转载-非商用-非衍生-保持署名|Creative Commons BY-NC-ND 3.0,转载请注明作者及出处。 关键字： 成员方法中的内部类 局部变量 常量的生命周期这个问题的答案来自:St">
+<meta property="og:description" content="作者: insightcodeyk出处: https://insightcodeyk.github.io/声明: 本文采用以下协议进行授权: 自由转载-非商用-非衍生-保持署名|Creative Commons BY-NC-ND 3.0,转载请注明作者及出处。 关于HashMap的详细解析请阅读以下文章HashMap机制与要点 1 HashMap中的”相等”语义JDK1.8中HashMap判断两个">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-30T10:43:42.266Z">
+<meta property="og:updated_time" content="2018-04-30T10:44:17.247Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="final关键字修饰形参的应用场景">
-<meta name="twitter:description" content="作者: insightcodeyk出处: https://insightcodeyk.github.io/2018/04/19/FinalKeywordInPara/声明: 本文采用以下协议进行授权: 自由转载-非商用-非衍生-保持署名|Creative Commons BY-NC-ND 3.0,转载请注明作者及出处。 关键字： 成员方法中的内部类 局部变量 常量的生命周期这个问题的答案来自:St">
+<meta name="twitter:title" content="一些关于HashMap的思考">
+<meta name="twitter:description" content="作者: insightcodeyk出处: https://insightcodeyk.github.io/声明: 本文采用以下协议进行授权: 自由转载-非商用-非衍生-保持署名|Creative Commons BY-NC-ND 3.0,转载请注明作者及出处。 关于HashMap的详细解析请阅读以下文章HashMap机制与要点 1 HashMap中的”相等”语义JDK1.8中HashMap判断两个">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/19/FinalKeywordInPara/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/20/SomeTipsInHashMap/"/>
 
 
 
@@ -127,7 +127,7 @@
   };
 </script>
 
-  <title>final关键字修饰形参的应用场景 | Insightcodeyk</title>
+  <title>一些关于HashMap的思考 | Insightcodeyk</title>
   
 
 
@@ -291,7 +291,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/19/FinalKeywordInPara/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/20/SomeTipsInHashMap/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ke Yi">
@@ -308,7 +308,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">final关键字修饰形参的应用场景
+          <h1 class="post-title" itemprop="name headline">一些关于HashMap的思考
               
             
           </h1>
@@ -327,7 +327,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-19T00:22:11+08:00">2018-04-19</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-20T20:18:20+08:00">2018-03-20</time>
             
 
             
@@ -382,22 +382,88 @@
       
 
       
-        <p>作者: insightcodeyk<br>出处: <a href="https://insightcodeyk.github.io/2018/04/19/FinalKeywordInPara/" target="_blank" rel="noopener">https://insightcodeyk.github.io/2018/04/19/FinalKeywordInPara/</a><br>声明: 本文采用以下协议进行授权: <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh" target="_blank" rel="noopener">自由转载-非商用-非衍生-保持署名|Creative Commons BY-NC-ND 3.0</a>,转载请注明作者及出处。</p>
-<h3 id="关键字：-成员方法中的内部类-局部变量-常量的生命周期"><a href="#关键字：-成员方法中的内部类-局部变量-常量的生命周期" class="headerlink" title="关键字： 成员方法中的内部类 局部变量 常量的生命周期"></a>关键字： 成员方法中的内部类 局部变量 常量的生命周期</h3><p>这个问题的答案来自:<br><a href="https://stackoverflow.com/questions/500508/why-should-i-use-the-keyword-final-on-a-method-parameter-in-java" target="_blank" rel="noopener">StackOverFlow</a>  Michael Borgwardt<br>final参数的应用场景：<br>    若该参数在传入成员方法的内部类中被使用，若不设置为final类型，则可能发生成员方法以及该临时变量参数引用被回收而内部类没被回收，内部类访问不存在的地址.</p>
-<pre><code>Iterator&lt;Integer&gt; createIntegerIterator(final int from, final int to) {
-    return new Iterator&lt;Integer&gt;() {
-        int index = from;
-        public Integer next() {
-            return index++;
-        }
+        <p>作者: insightcodeyk<br>出处: <a href="https://insightcodeyk.github.io/" target="_blank" rel="noopener">https://insightcodeyk.github.io/</a><br>声明: 本文采用以下协议进行授权: <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh" target="_blank" rel="noopener">自由转载-非商用-非衍生-保持署名|Creative Commons BY-NC-ND 3.0</a>,转载请注明作者及出处。</p>
+<h3 id="关于HashMap的详细解析请阅读以下文章"><a href="#关于HashMap的详细解析请阅读以下文章" class="headerlink" title="关于HashMap的详细解析请阅读以下文章"></a>关于HashMap的详细解析请阅读以下文章</h3><p><a href="https://insightcodeyk.github.io/2018/04/19/HashMap/" target="_blank" rel="noopener">HashMap机制与要点</a></p>
+<h2 id="1-HashMap中的”相等”语义"><a href="#1-HashMap中的”相等”语义" class="headerlink" title="1 HashMap中的”相等”语义"></a>1 HashMap中的”相等”语义</h2><p>JDK1.8中HashMap判断两个key是否相等的条件是:</p>
+<pre><code>if (p.hash == hash &amp;&amp;
+            ((k = p.key) == key || (key != null &amp;&amp; key.equals(k))))
+</code></pre><p>可以看出首先判断hash值是否相等，再判断内存地址是否相等或者equals方法是否为true。在没有覆盖equals的情况下，第二个条件需要内存地址相同，也就是相同的引用才能判true。多数情况下我们的业务场景需要根据成员变量的值来覆盖equals()方法获得自己定义的”相等”语义。</p>
+<h2 id="2-Key和不可变类型"><a href="#2-Key和不可变类型" class="headerlink" title="2 Key和不可变类型"></a>2 Key和不可变类型</h2><p>维护Key值得不可变性，也就是说保持(设定)Key类型为不可变类型是非常重要的。在开发过程中常用见的情况是选择主键和常量作为equals方法和hashCode方法的参数。为了减少后来者更改代码可能带来的风险，良好的习惯是对作为参数的成员变量全部设置为final。通过不提供set方法<br>来保证安全不是推荐的方式。<br>若Key类型为可变类型在某些情况下会带来的风险就像以下测试代码中展示的：<br>代码导读：<br>1.以下class VariedKey是Key的类<br>2.public类是HashMapTest,以下只展示main方法，HashMapTest类中只有main方法<br>3.重点部分解释在main方法的代码注释中</p>
+<pre><code>    /*  
+        这是Key对象的类，其中覆盖了hashCode()和equals()，用两个成员变量作为参数。其中constantKey作为final变量，而variedKey变量可以通过setVariedKey方法进行更改。
 
-        public boolean hasNext() {
-            return index &lt;= to;
-        }
-        // remove method omitted
-    };
+    */
+    class VariedKey{
+    private fianl int constantKey; 
+    private int variedKey;
+
+    public VariedKey(int constantKey, int variedKey) {
+        this.constantKey = constantKey;
+        this.variedKey = variedKey;
+    }
+
+    public void setVariedKey(int setKey) {
+        variedKey = setKey;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        VariedKey variedKey1 = (VariedKey) o;
+        return constantKey == variedKey1.constantKey &amp;&amp;
+                variedKey == variedKey1.variedKey;
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(constantKey, variedKey);
+    }
 }
-</code></pre><p>在这个例子中，传入参数from, to在匿名内部类中被使用，改类中的方法调用的时候，这两个参数若不为final，则其引用在这个createIntegerIterator方法执行完之后就会被回收.<br>也就是说，成员方法内部类的生命周期长于成员方法本身，因此，内部类使用的成员方法中定义的变量生命周期必须等于或长于内部类，final变量就是很好的解决方案。<br>需要<strong>特别注意</strong>的是，现在即便这个参数不声明为final也可以运行，原因是因为，编译器帮我做了这件事，当我们看查反编译的字节码文件时，可以发现，编译器帮我们补上了final关键字.</p>
+</code></pre><p>main方法：</p>
+<pre><code>public static void main(String[] args) {
+    //这部分是构建Map
+    VariedKey mapElm1 = new VariedKey(1, 2);
+    VariedKey mapElm2 = new VariedKey(3, 4);
+    VariedKey mapElm3 = new VariedKey(5, 6);
+    VariedKey mapElm4 = new VariedKey(7, 8);
+    HashMap&lt;VariedKey, String&gt; temMap = new HashMap&lt;&gt;();
+    temMap.put(mapElm1, &quot;a&quot;);
+    temMap.put(mapElm2, &quot;b&quot;);
+    temMap.put(mapElm3, &quot;c&quot;);
+    temMap.put(mapElm4, &quot;d&quot;);
+
+
+    Set&lt;VariedKey&gt; keySet = temMap.keySet();
+    for(VariedKey e : keySet) {
+        System.out.println(e.hashCode() + &quot; : &quot; + temMap.get(e));
+    }
+
+    System.out.println();
+
+    mapElm1.setVariedKey(5); //!!!这句更改了第一个元素的variedKey成员变量，变成(1, 5)
+    VariedKey mapElem5 = new VariedKey(1, 5);//在这里再put一个成员变量为(1, 5)的元素进Map
+    temMap.put(mapElem5, &quot;e&quot;);
+    System.out.println(&quot;SizeMap: &quot; + temMap.size());//Map的值从4变成了5
+
+    //实际上，通过修改该第一个元素的成员变量，我们已经无法再访问到第一个元素放入的value值
+
+    keySet = temMap.keySet();
+    System.out.println(&quot;SizeKeySet: &quot; + keySet.size());
+    System.out.println();
+    for(VariedKey e : keySet) {
+        System.out.println(e.hashCode() + &quot; : &quot; + temMap.get(e));
+    }
+
+    VariedKey mapElm6 = new VariedKey(1, 2);//当我们重新创建一个变量和第一个元素更改前的Key
+
+
+    System.out.println();
+    System.out.println(mapElm6.hashCode() + &quot; : &quot; + temMap.get(mapElm6));//当我们用这个Key去获得value值时，value值为null
+
+    }
+</code></pre><p>结论：对于HashMap的Key元素类型设定一定要保证为不可变类型，最好设置为final以保证后续维护人员清楚这是不可更改的类型。</p>
 
       
     </div>
@@ -420,6 +486,8 @@
           
             <a href="/tags/Java/" rel="tag"># Java</a>
           
+            <a href="/tags/Container/" rel="tag"># Container</a>
+          
         </div>
       
 
@@ -431,8 +499,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/27/ContainerFeatures/" rel="next" title="容器特点和应用场景">
-                <i class="fa fa-chevron-left"></i> 容器特点和应用场景
+              <a href="/2018/03/12/Container/" rel="next" title="容器">
+                <i class="fa fa-chevron-left"></i> 容器
               </a>
             
           </div>
@@ -441,8 +509,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/04/19/HashMap/" rel="prev" title="HashMap">
-                HashMap <i class="fa fa-chevron-right"></i>
+              <a href="/2018/03/27/ContainerFeatures/" rel="prev" title="容器特点和应用场景">
+                容器特点和应用场景 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -605,7 +673,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#关键字：-成员方法中的内部类-局部变量-常量的生命周期"><span class="nav-text">关键字： 成员方法中的内部类 局部变量 常量的生命周期</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#关于HashMap的详细解析请阅读以下文章"><span class="nav-text">关于HashMap的详细解析请阅读以下文章</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-HashMap中的”相等”语义"><span class="nav-text">1 HashMap中的”相等”语义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Key和不可变类型"><span class="nav-text">2 Key和不可变类型</span></a></div>
             
 
           </div>
