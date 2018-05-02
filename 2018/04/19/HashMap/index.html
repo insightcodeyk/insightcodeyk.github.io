@@ -99,18 +99,20 @@
 
 
 
-  <meta name="description" content="HashMap机制与要点1 Object.HashCode()2 HashMap逻辑结构3 HashMap实现要点4 JDK1.7,JDK1.8的区别5 Tips and HighLight">
+  <meta name="description" content="作者: insightcodeyk出处: https://insightcodeyk.github.io/2018/04/19/HashMap/声明: 本文采用以下协议进行授权: 自由转载-非商用-非衍生-保持署名|Creative Commons BY-NC-ND 3.0,转载请注明作者及出处。 1 HashMap存储结构1.1 重要成员变量1.transient Node&amp;lt;K,V&amp;gt;">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HashMap">
+<meta property="og:title" content="HashMap机制与要点">
 <meta property="og:url" content="http://yoursite.com/2018/04/19/HashMap/index.html">
 <meta property="og:site_name" content="Insightcodeyk">
-<meta property="og:description" content="HashMap机制与要点1 Object.HashCode()2 HashMap逻辑结构3 HashMap实现要点4 JDK1.7,JDK1.8的区别5 Tips and HighLight">
+<meta property="og:description" content="作者: insightcodeyk出处: https://insightcodeyk.github.io/2018/04/19/HashMap/声明: 本文采用以下协议进行授权: 自由转载-非商用-非衍生-保持署名|Creative Commons BY-NC-ND 3.0,转载请注明作者及出处。 1 HashMap存储结构1.1 重要成员变量1.transient Node&amp;lt;K,V&amp;gt;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-19T03:06:38.684Z">
+<meta property="og:image" content="http://yoursite.com/images/HashTable.jpg">
+<meta property="og:updated_time" content="2018-05-02T09:37:46.983Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HashMap">
-<meta name="twitter:description" content="HashMap机制与要点1 Object.HashCode()2 HashMap逻辑结构3 HashMap实现要点4 JDK1.7,JDK1.8的区别5 Tips and HighLight">
+<meta name="twitter:title" content="HashMap机制与要点">
+<meta name="twitter:description" content="作者: insightcodeyk出处: https://insightcodeyk.github.io/2018/04/19/HashMap/声明: 本文采用以下协议进行授权: 自由转载-非商用-非衍生-保持署名|Creative Commons BY-NC-ND 3.0,转载请注明作者及出处。 1 HashMap存储结构1.1 重要成员变量1.transient Node&amp;lt;K,V&amp;gt;">
+<meta name="twitter:image" content="http://yoursite.com/images/HashTable.jpg">
 
 
 
@@ -127,7 +129,7 @@
   };
 </script>
 
-  <title>HashMap | Insightcodeyk</title>
+  <title>HashMap机制与要点 | Insightcodeyk</title>
   
 
 
@@ -308,7 +310,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">HashMap
+          <h1 class="post-title" itemprop="name headline">HashMap机制与要点
               
             
           </h1>
@@ -382,7 +384,29 @@
       
 
       
-        <h1 id="HashMap机制与要点"><a href="#HashMap机制与要点" class="headerlink" title="HashMap机制与要点"></a>HashMap机制与要点</h1><h2 id="1-Object-HashCode"><a href="#1-Object-HashCode" class="headerlink" title="1 Object.HashCode()"></a>1 Object.HashCode()</h2><h2 id="2-HashMap逻辑结构"><a href="#2-HashMap逻辑结构" class="headerlink" title="2 HashMap逻辑结构"></a>2 HashMap逻辑结构</h2><h2 id="3-HashMap实现要点"><a href="#3-HashMap实现要点" class="headerlink" title="3 HashMap实现要点"></a>3 HashMap实现要点</h2><h2 id="4-JDK1-7-JDK1-8的区别"><a href="#4-JDK1-7-JDK1-8的区别" class="headerlink" title="4 JDK1.7,JDK1.8的区别"></a>4 JDK1.7,JDK1.8的区别</h2><h2 id="5-Tips-and-HighLight"><a href="#5-Tips-and-HighLight" class="headerlink" title="5 Tips and HighLight"></a>5 Tips and HighLight</h2>
+        <p>作者: insightcodeyk<br>出处: <a href="https://insightcodeyk.github.io/2018/04/19/HashMap/" target="_blank" rel="noopener">https://insightcodeyk.github.io/2018/04/19/HashMap/</a><br>声明: 本文采用以下协议进行授权: <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh" target="_blank" rel="noopener">自由转载-非商用-非衍生-保持署名|Creative Commons BY-NC-ND 3.0</a>,转载请注明作者及出处。</p>
+<h2 id="1-HashMap存储结构"><a href="#1-HashMap存储结构" class="headerlink" title="1 HashMap存储结构"></a>1 HashMap存储结构</h2><h3 id="1-1-重要成员变量"><a href="#1-1-重要成员变量" class="headerlink" title="1.1 重要成员变量"></a>1.1 重要成员变量</h3><pre><code>1.transient Node&lt;K,V&gt;[] table;//Hash桶数组
+这是以key为index的数组，也就是说这个数组的就是HashMap键值对的物理结构
+
+2.int threshold;//table数组所能容纳的上限值，超过就会调用resize().  (threshold = capacity * load factor).
+
+3.finale float loadFactor;//装载因子
+设置的table数组的容量比例，超过容量比例就会扩容，扩大为原来的两倍。设置装载因子的目的是提高HashMap查找效率
+
+4.static final float DEFAULT_LOAD_FACTOR = 0.75f;//默认装载因子
+若初始化没有指定装载因子，则默认使用0.75为容量比例。
+
+5.static final int TREEIFY_THRESHOLD = 8;//链表上限
+在重复的Key链表节点超过TREEIFY_THRESHOLD之后对Key链表节点结构进行重构为红黑树
+
+6.static final int UNTREEIFY_THRESHOLD = 6;//红黑树下限
+当红黑树节点小于等于6时，红黑树重构为单链表
+
+7.staitc final int MIN_TREEIFY_CAPACITY = 64;//扩容和红黑树化的阈值
+当table数组容量大于等于64时，哈希桶节点增加超过8则进行红黑树化，否则进行扩容
+</code></pre><h3 id="1-2-HashMap存储组织结构"><a href="#1-2-HashMap存储组织结构" class="headerlink" title="1.2 HashMap存储组织结构"></a>1.2 HashMap存储组织结构</h3><p>HashMap中的存储结构，Hash桶数组的结构如下图:<br><img src="/images/HashTable.jpg" alt=""><br>通过这个结构图可以通过几个简单的要点罗列对HashMap的组织结构有一个直观的认知：<br>    1.HashMap维护一个数组table<br>    2.table的index是由HashMap定义的hash算法根据传入的key对象计算出<br>    3.HashMap使用链地址法<br>    4.当链长度小于等于8时，相同Index的键值对以单链表形式存储；当链大于8时，若table长度大于等于64，则相同Index的键值对组织形式重构为红黑树；否则进行resize()</p>
+<h2 id="2-HashMap实现要点"><a href="#2-HashMap实现要点" class="headerlink" title="2 HashMap实现要点"></a>2 HashMap实现要点</h2><p>理解HashMap的实现方式有三个要点：</p>
+<h3 id="2-1-Key值和Hash桶数组index的映射关系"><a href="#2-1-Key值和Hash桶数组index的映射关系" class="headerlink" title="2.1 Key值和Hash桶数组index的映射关系"></a>2.1 Key值和Hash桶数组index的映射关系</h3><h3 id="2-2-扩容机制"><a href="#2-2-扩容机制" class="headerlink" title="2.2 扩容机制"></a>2.2 扩容机制</h3><h3 id="2-3-HashMap中put方法的实现方式"><a href="#2-3-HashMap中put方法的实现方式" class="headerlink" title="2.3 HashMap中put方法的实现方式"></a>2.3 HashMap中put方法的实现方式</h3><h2 id="3-JDK1-7-JDK1-8的区别"><a href="#3-JDK1-7-JDK1-8的区别" class="headerlink" title="3 JDK1.7,JDK1.8的区别"></a>3 JDK1.7,JDK1.8的区别</h2><h2 id="4-Tips-and-HighLight"><a href="#4-Tips-and-HighLight" class="headerlink" title="4 Tips and HighLight"></a>4 Tips and HighLight</h2>
       
     </div>
 
@@ -585,7 +609,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HashMap机制与要点"><span class="nav-text">HashMap机制与要点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Object-HashCode"><span class="nav-text">1 Object.HashCode()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-HashMap逻辑结构"><span class="nav-text">2 HashMap逻辑结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-HashMap实现要点"><span class="nav-text">3 HashMap实现要点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-JDK1-7-JDK1-8的区别"><span class="nav-text">4 JDK1.7,JDK1.8的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Tips-and-HighLight"><span class="nav-text">5 Tips and HighLight</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-HashMap存储结构"><span class="nav-text">1 HashMap存储结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-重要成员变量"><span class="nav-text">1.1 重要成员变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-HashMap存储组织结构"><span class="nav-text">1.2 HashMap存储组织结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-HashMap实现要点"><span class="nav-text">2 HashMap实现要点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-Key值和Hash桶数组index的映射关系"><span class="nav-text">2.1 Key值和Hash桶数组index的映射关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-扩容机制"><span class="nav-text">2.2 扩容机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-HashMap中put方法的实现方式"><span class="nav-text">2.3 HashMap中put方法的实现方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-JDK1-7-JDK1-8的区别"><span class="nav-text">3 JDK1.7,JDK1.8的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Tips-and-HighLight"><span class="nav-text">4 Tips and HighLight</span></a></li></ol></div>
             
 
           </div>
