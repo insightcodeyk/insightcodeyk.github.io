@@ -99,18 +99,18 @@
 
 
 
-  <meta name="description" content="作者: insightcodeyk出处: https://insightcodeyk.github.io/2018/04/19/HashMap/声明: 本文采用以下协议进行授权: 自由转载-非商用-非衍生-保持署名|Creative Commons BY-NC-ND 3.0,转载请注明作者及出处。 1 版本Intellij IDEA: 2017.3.1JDK: 1.8.0_152Tomcat: 8">
+  <meta name="description" content="作者: insightcodeyk出处: https://insightcodeyk.github.io/2018/04/19/HashMap/声明: 本文采用以下协议进行授权: 自由转载-非商用-非衍生-保持署名|Creative Commons BY-NC-ND 3.0,转载请注明作者及出处。 阅读本篇文章之前需要对Tomcat目录结构有基本了解，以下版本是笔者使用版本，其他各个版本的Inte">
 <meta name="keywords" content="Configure">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Intellij IDEA配置Tomcat运行环境">
 <meta property="og:url" content="http://yoursite.com/2018/04/19/IntellijIDEAAndTomcatCircumstance/index.html">
 <meta property="og:site_name" content="Insightcodeyk">
-<meta property="og:description" content="作者: insightcodeyk出处: https://insightcodeyk.github.io/2018/04/19/HashMap/声明: 本文采用以下协议进行授权: 自由转载-非商用-非衍生-保持署名|Creative Commons BY-NC-ND 3.0,转载请注明作者及出处。 1 版本Intellij IDEA: 2017.3.1JDK: 1.8.0_152Tomcat: 8">
+<meta property="og:description" content="作者: insightcodeyk出处: https://insightcodeyk.github.io/2018/04/19/HashMap/声明: 本文采用以下协议进行授权: 自由转载-非商用-非衍生-保持署名|Creative Commons BY-NC-ND 3.0,转载请注明作者及出处。 阅读本篇文章之前需要对Tomcat目录结构有基本了解，以下版本是笔者使用版本，其他各个版本的Inte">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-06T11:40:58.482Z">
+<meta property="og:updated_time" content="2018-05-06T11:49:07.010Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Intellij IDEA配置Tomcat运行环境">
-<meta name="twitter:description" content="作者: insightcodeyk出处: https://insightcodeyk.github.io/2018/04/19/HashMap/声明: 本文采用以下协议进行授权: 自由转载-非商用-非衍生-保持署名|Creative Commons BY-NC-ND 3.0,转载请注明作者及出处。 1 版本Intellij IDEA: 2017.3.1JDK: 1.8.0_152Tomcat: 8">
+<meta name="twitter:description" content="作者: insightcodeyk出处: https://insightcodeyk.github.io/2018/04/19/HashMap/声明: 本文采用以下协议进行授权: 自由转载-非商用-非衍生-保持署名|Creative Commons BY-NC-ND 3.0,转载请注明作者及出处。 阅读本篇文章之前需要对Tomcat目录结构有基本了解，以下版本是笔者使用版本，其他各个版本的Inte">
 
 
 
@@ -383,27 +383,28 @@
 
       
         <p>作者: insightcodeyk<br>出处: <a href="https://insightcodeyk.github.io/2018/04/19/HashMap/" target="_blank" rel="noopener">https://insightcodeyk.github.io/2018/04/19/HashMap/</a><br>声明: 本文采用以下协议进行授权: <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh" target="_blank" rel="noopener">自由转载-非商用-非衍生-保持署名|Creative Commons BY-NC-ND 3.0</a>,转载请注明作者及出处。</p>
+<p>阅读本篇文章之前需要对Tomcat目录结构有基本了解，以下版本是笔者使用版本，其他各个版本的Intellij IDEA操作类似</p>
 <h2 id="1-版本"><a href="#1-版本" class="headerlink" title="1 版本"></a>1 版本</h2><p>Intellij IDEA: 2017.3.1<br>JDK: 1.8.0_152<br>Tomcat: 8.5.24<br>Windows: win8</p>
-<h2 id="2-配置步骤"><a href="#2-配置步骤" class="headerlink" title="2 配置步骤"></a>2 配置步骤</h2><h3 id="2-1-建立新工程"><a href="#2-1-建立新工程" class="headerlink" title="2.1 建立新工程"></a>2.1 建立新工程</h3><p><image src="/image/FirstStep.png"></image><br>以上图片里面有5个标号<br>1.选择JavaEE工程<br>2.选择Web应用程序<br>3.点击New选择你的JDK包位置<br>4.点击New选择你的Tomcat包位置<br>5.点击下一步</p>
-<h3 id="2-2-选择工程位置"><a href="#2-2-选择工程位置" class="headerlink" title="2.2 选择工程位置"></a>2.2 选择工程位置</h3><p><image src="/image/SecondStep.png.png"><br>以上图片里有3个标号<br>1.选择自己的工程名称<br>2.选择自己的工程位置<br>3.点击完成</image></p>
-<h3 id="2-3-配置Idea中Tomcat结构"><a href="#2-3-配置Idea中Tomcat结构" class="headerlink" title="2.3 配置Idea中Tomcat结构"></a>2.3 配置Idea中Tomcat结构</h3><h4 id="2-3-1-定位Tomcat目录结构模块"><a href="#2-3-1-定位Tomcat目录结构模块" class="headerlink" title="2.3.1 定位Tomcat目录结构模块"></a>2.3.1 定位Tomcat目录结构模块</h4><p><image src="/image/ThirdStep1.png"></image><br>以上图片里有1个标号<br>1.打开当前工程结构，出现下图所示菜单框</p>
-<p><image src="/image/ThirdStep2.png"></image><br>以上图片里有4个标号<br>依次点击1，2，3标识的选项出现标号4所示目录结构</p>
-<h4 id="2-3-2-创建Tomcat目录结构"><a href="#2-3-2-创建Tomcat目录结构" class="headerlink" title="2.3.2 创建Tomcat目录结构"></a>2.3.2 创建Tomcat目录结构</h4><p><image src="/image/ThirdStep3.png"></image><br>以上图片里有3个标号<br>通过<strong>右键</strong>选择标号1选项依次创建如标号2所示的Tomcat目录结构，最后点击标号3选项OK</p>
-<h4 id="2-3-3-设置Idea字节码文件输出位置"><a href="#2-3-3-设置Idea字节码文件输出位置" class="headerlink" title="2.3.3 设置Idea字节码文件输出位置"></a>2.3.3 设置Idea字节码文件输出位置</h4><p><image src="/image/ThirdStep4.png"></image><br>以上图片里有3个标号<br>依次选择1，2标号所示选项，对标号3所示的两个路径更改为上一步中创建的classes文件路径，然后点击标号4应用保存</p>
-<h4 id="2-3-4-设置Tomcat的lib包依赖"><a href="#2-3-4-设置Tomcat的lib包依赖" class="headerlink" title="2.3.4 设置Tomcat的lib包依赖"></a>2.3.4 设置Tomcat的lib包依赖</h4><p><image src="/image/ThirdStep5.png"></image><br>以上图片里有4个标号<br>依次选择标号1，2所示选项，弹框中选择标号3所示选项，出现下图</p>
-<p><image src="/image/ThirdStep6.png"></image><br>以上图片里面有2个标号<br>依次点击1，2标号选项，会出现如下图所示内容</p>
-<p><image src="/image/ThirdStep7.png"></image><br>以上图片里面有2个标号<br>1.选择Tomcat目录结构中的lib目录<br>2.确定选项</p>
-<h3 id="2-4-配置Tomcat运行环境"><a href="#2-4-配置Tomcat运行环境" class="headerlink" title="2.4 配置Tomcat运行环境"></a>2.4 配置Tomcat运行环境</h3><p><image src="/image/FourthStep1.png"></image><br>以上图片里有2个标号<br>依次点击两个标号出现运行环境配置如下图</p>
-<p><image src="/image/FourthStep2.png"> </image><br>以上图片里有3个标号<br>1.点击标号1出现菜单<br>2.若能找到如标号2所示就不用点标号3<br>3.若找不到标号2所示Tomcat server则点击标号3扩展栏查找，点击选择你的loacl或者romate，Tomcat主机后出现下面的界面</p>
-<p><image src="/image/FourthStep3.png"></image><br>以上图片有4个标号<br>1.输入你的运行环境名字<br>2.点击标号2所示选项<br>3.点击标号3所示出现选择菜单<br>4.点击标号4所示选项出现以下菜单</p>
-<p><image src="/image/FourthStep4.png"></image><br>以上图片中有2个标号<br>1.输入你的Web应用程序入口<br>2.确定应用，现在你已经完成了你的整个配置</p>
+<h2 id="2-配置步骤"><a href="#2-配置步骤" class="headerlink" title="2 配置步骤"></a>2 配置步骤</h2><h3 id="2-1-建立新工程"><a href="#2-1-建立新工程" class="headerlink" title="2.1 建立新工程"></a>2.1 建立新工程</h3><p><image src="/images/FirstStep.png"></image><br>以上图片里面有5个标号<br>1.选择JavaEE工程<br>2.选择Web应用程序<br>3.点击New选择你的JDK包位置<br>4.点击New选择你的Tomcat包位置<br>5.点击下一步</p>
+<h3 id="2-2-选择工程位置"><a href="#2-2-选择工程位置" class="headerlink" title="2.2 选择工程位置"></a>2.2 选择工程位置</h3><p><image src="/images/SecondStep.png"><br>以上图片里有3个标号<br>1.选择自己的工程名称<br>2.选择自己的工程位置<br>3.点击完成</image></p>
+<h3 id="2-3-配置Idea中Tomcat结构"><a href="#2-3-配置Idea中Tomcat结构" class="headerlink" title="2.3 配置Idea中Tomcat结构"></a>2.3 配置Idea中Tomcat结构</h3><h4 id="2-3-1-定位Tomcat目录结构模块"><a href="#2-3-1-定位Tomcat目录结构模块" class="headerlink" title="2.3.1 定位Tomcat目录结构模块"></a>2.3.1 定位Tomcat目录结构模块</h4><p><image src="/images/ThirdStep1.png"></image><br>以上图片里有1个标号<br>1.打开当前工程结构，出现下图所示菜单框</p>
+<p><image src="/images/ThirdStep2.png"></image><br>以上图片里有4个标号<br>依次点击1，2，3标识的选项出现标号4所示目录结构</p>
+<h4 id="2-3-2-创建Tomcat目录结构"><a href="#2-3-2-创建Tomcat目录结构" class="headerlink" title="2.3.2 创建Tomcat目录结构"></a>2.3.2 创建Tomcat目录结构</h4><p><image src="/images/ThirdStep3.png"></image><br>以上图片里有3个标号<br>通过<strong>右键</strong>选择标号1选项依次创建如标号2所示的Tomcat目录结构，最后点击标号3选项OK</p>
+<h4 id="2-3-3-设置Idea字节码文件输出位置"><a href="#2-3-3-设置Idea字节码文件输出位置" class="headerlink" title="2.3.3 设置Idea字节码文件输出位置"></a>2.3.3 设置Idea字节码文件输出位置</h4><p><image src="/images/ThirdStep4.png"></image><br>以上图片里有3个标号<br>依次选择1，2标号所示选项，对标号3所示的两个路径更改为上一步中创建的classes文件路径，然后点击标号4应用保存</p>
+<h4 id="2-3-4-设置Tomcat的lib包依赖"><a href="#2-3-4-设置Tomcat的lib包依赖" class="headerlink" title="2.3.4 设置Tomcat的lib包依赖"></a>2.3.4 设置Tomcat的lib包依赖</h4><p><image src="/images/ThirdStep5.png"></image><br>以上图片里有4个标号<br>依次选择标号1，2所示选项，弹框中选择标号3所示选项，出现下图</p>
+<p><image src="/images/ThirdStep6.png"></image><br>以上图片里面有2个标号<br>依次点击1，2标号选项，会出现如下图所示内容</p>
+<p><image src="/images/ThirdStep7.png"></image><br>以上图片里面有2个标号<br>1.选择Tomcat目录结构中的lib目录<br>2.确定选项</p>
+<h3 id="2-4-配置Tomcat运行环境"><a href="#2-4-配置Tomcat运行环境" class="headerlink" title="2.4 配置Tomcat运行环境"></a>2.4 配置Tomcat运行环境</h3><p><image src="/images/FourthStep1.png"></image><br>以上图片里有2个标号<br>依次点击两个标号出现运行环境配置如下图</p>
+<p><image src="/images/FourthStep2.png"> </image><br>以上图片里有3个标号<br>1.点击标号1出现菜单<br>2.若能找到如标号2所示就不用点标号3<br>3.若找不到标号2所示Tomcat server则点击标号3扩展栏查找，点击选择你的loacl或者romate，Tomcat主机后出现下面的界面</p>
+<p><image src="/images/FourthStep3.png"></image><br>以上图片有4个标号<br>1.输入你的运行环境名字<br>2.点击标号2所示选项<br>3.点击标号3所示出现选择菜单<br>4.点击标号4所示选项出现以下菜单</p>
+<p><image src="/images/FourthStep4.png"></image><br>以上图片中有2个标号<br>1.输入你的Web应用程序入口<br>2.确定应用，现在你已经完成了你的整个配置</p>
 <h2 id="3-Tips"><a href="#3-Tips" class="headerlink" title="3 Tips"></a>3 Tips</h2><h3 id="3-1-热部署-debug模式下"><a href="#3-1-热部署-debug模式下" class="headerlink" title="3.1 热部署(debug模式下)"></a>3.1 热部署(debug模式下)</h3><p>设置热部署方式后，不需要每次更改文件都要重新部署Tomcat</p>
-<p><image src="/image/FifthStep.png"></image><br>以上图片中有2个标号<br>1.按照途中标号1内的选项设置<br>2.确定应用</p>
+<p><image src="/images/FifthStep.png"></image><br>以上图片中有2个标号<br>1.按照途中标号1内的选项设置<br>2.确定应用</p>
 <h3 id="3-2-session序列化存储"><a href="#3-2-session序列化存储" class="headerlink" title="3.2 session序列化存储"></a>3.2 session序列化存储</h3><p>Idea会在Tomcat服务器退出内存后自动清除session序列化内容，需要额外设置开启允许存储序列化内容</p>
-<p><image src="/image/SixthStep.png"></image><br>以上图片中有2个标号<br>1.点击选中<br>2.确定应用</p>
+<p><image src="/images/SixthStep.png"></image><br>以上图片中有2个标号<br>1.点击选中<br>2.确定应用</p>
 <h3 id="3-3-默认serlvet-Root-入口"><a href="#3-3-默认serlvet-Root-入口" class="headerlink" title="3.3 默认serlvet(Root)入口"></a>3.3 默认serlvet(Root)入口</h3><p>Idea中Tomcat部署路径不是Tomcat包中的Webapps下，而是用了Tomcat实例在以下图片所示路径中</p>
-<p><image src="/image/SeventhStep1.png"></image><br>因此无法直接访问到默认入口，需要额外设置</p>
-<p><image src="/image/SeventhStep2.png"></image><br>以上图片中有2个标号<br>1.点击选中<br>2.确定应用</p>
+<p><image src="/images/SeventhStep1.png"></image><br>因此无法直接访问到默认入口，需要额外设置</p>
+<p><image src="/images/SeventhStep2.png"></image><br>以上图片中有2个标号<br>1.点击选中<br>2.确定应用</p>
 
       
     </div>
